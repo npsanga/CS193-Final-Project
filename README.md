@@ -8,7 +8,7 @@ A problem I have is that sometimes I tell myself I can have a little break from 
 
 ## How It Works
 
-![System diagram](docs/diagram.png)
+![System diagram](docs/Flowchart.png)
 
 ## Tech Stack
 
