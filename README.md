@@ -30,11 +30,9 @@ How to actually run the thing, with examples.
 
 ## Roadmap
 
-- [ ] GUI
-- [ ] Active session time tracking
-- [ ] Streak or points system
-- [ ] Webpage/App blocking if over desired session length
-- [ ] Sync with apple screen time
+- [ ] Error handling
+- [ ] Make it runnable from the terminal or a desktop file
+- [ ] Compute weekly average difference, save to CSV every week
 
 ## Author
 
