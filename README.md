@@ -30,9 +30,6 @@ How to actually run the thing, with examples.
 
 ## Roadmap
 
-Features you haven't built yet but plan to (pull these from your
-"Schedule" quadrant in the Eisenhower Matrix).
-
 - [ ] GUI
 - [ ] Active session time tracking
 - [ ] Streak or points system
