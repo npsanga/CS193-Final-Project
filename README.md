@@ -1,4 +1,4 @@
-# Screen-time Session Recorder
+# Screen Time Session Recorder
 
 Allows a user to create screen time sessions and compare how long they spent vs how long they wanted to spend
 
@@ -20,21 +20,24 @@ A problem I have is that sometimes I tell myself I can have a little break from 
 Step-by-step: how does someone who just cloned your repo get it
 running?
 
-Unfinished
+[Unfinished]
 
 ## Usage
 
 How to actually run the thing, with examples.
 
-Unfinished
+[Unfinished]
 
 ## Roadmap
 
 Features you haven't built yet but plan to (pull these from your
 "Schedule" quadrant in the Eisenhower Matrix).
 
-- [ ] Desktop notifications
-- [ ] Multi-directory support
+- [ ] GUI
+- [ ] Active session time tracking
+- [ ] Streak or points system
+- [ ] Webpage/App blocking if over desired session length
+- [ ] Sync with apple screen time
 
 ## Author
 
