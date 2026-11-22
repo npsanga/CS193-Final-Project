@@ -20,21 +20,17 @@ public class Main {
             }
         }
         if (input == 1) {
-            try {
-                time = Double.parseDouble(IO.readln("Enter session time in minutes:\n"));
-                date = IO.readln("Enter session date:\n");
-                while (true) {
-                    try {
-                        actualLength = Double.parseDouble(IO.readln("Enter actual session length in minutes:\n"));
-                        break;
-                    } catch (NumberFormatException | NullPointerException e) {
-                        IO.println("Invalid");
-                    }
+            while (true) {
+                try {
+                    time = Double.parseDouble(IO.readln("Enter session time in minutes:\n"));
+                    date = IO.readln("Enter session date:\n");
+                    actualLength = Double.parseDouble(IO.readln("Enter actual session length in minutes:\n"));
+                    difference = time - actualLength;
+                    break;
+                } catch (NumberFormatException | NullPointerException e) {
+                    IO.println("Invalid");
                 }
-            } catch (NumberFormatException | NullPointerException e) {
-                IO.println("Invalid");
             }
-
         } else if (input == 2) {
 
         } else {
