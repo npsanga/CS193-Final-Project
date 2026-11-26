@@ -14,19 +14,26 @@ public class DataManagement {
         data = new ArrayList<>();
     }
 
-    public void addData(Double time, String date, Double actualLength, Double difference) {
-        this.data.add(time + "," + date + "," + actualLength + "," + difference);
+    public String fileName() {
+        return fileName;
     }
 
-    public void writeToFile() {
-        try {
-            PrintWriter pw = new PrintWriter(new FileWriter(fileName));
-            for (String s : data) {
-                pw.println(s);
+    public void writeToFile(Double time, String date, Double actualLength, Double difference) {
+        if (time == 0 && date.equals("") && actualLength == 0 && difference == 0) {
+            try {
+                PrintWriter pw = new PrintWriter(new FileWriter(fileName, true));
+                pw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            pw.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } else {
+            try {
+                PrintWriter pw = new PrintWriter(new FileWriter(fileName, true));
+                pw.println(time + "," + date + "," + actualLength + "," + difference);
+                pw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -43,4 +50,32 @@ public class DataManagement {
         }
     }
     
+    public void displayData() {
+        int i = 1;
+        if (data.isEmpty()) {
+            IO.println("No available sessions to view");
+        }
+        for (String s : data) {
+            String[] parts = s.split(",");
+            if (i == 1) {
+                IO.println("=============================================");
+            }
+            IO.println("Session: " + i);
+            IO.println("Desired Session Length: " + parts[0] + " minutes");
+            IO.println("Session Date: " + parts[1]);
+            IO.println("Actual Session Length: " + parts[2] + " minutes");
+            double difference = Double.parseDouble(parts[3]);
+            if (difference < 0) {
+                IO.println(Math.abs(difference) + " minutes over expected length :(");
+            } else if (difference > 0){
+                IO.println(Math.abs(difference) + " minutes under expected length :)");
+            } else if (Math.abs(difference) < 1){
+                IO.println("Session length was close enough | Good job!");
+            } else {
+                IO.println("Session length was exactly as expected | Good job!");
+            }
+            IO.println("=============================================");
+            i++;
+        }
+    }
 }
